@@ -1,5 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+:root {
+    --color-dark: rgb(14, 14, 14);
+    --color-dark2: rgb(32, 32, 32);
+    --color-dark3: rgb(22, 22, 22);
+    --color-white: #fff;
+    --color-green: rgb(103, 195, 80);
+    --color-green2: rgb(51, 149, 26);
+    --color-red: rgb(184, 40, 35);
+    --color-red2: rgb(146, 22, 17);
+}
+
 body {
     font-family: 'Lato', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* input botão e lista*/
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* input e botão*/
+.content--add-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* responsividade!*/
+    flex-wrap: wrap;
+}
+
+#input-new-task,
+#btn-new-task {
+    border: none;
+    font-size: 1rem;
+
+    /* borda quando clica no input */
+    outline: none;
+    padding: 1rem;
+}
+
+#input-new-task {
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#btn-new-task {
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border-radius: 50%;
+
+    /* para não ficar oval*/
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-new-task:hover {
+    background-color: var(--color-dark3);
 }
